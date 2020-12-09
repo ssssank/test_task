@@ -1,0 +1,5 @@
+SELECT login, event, MAX(date) FROM syslog GROUP BY login, event;
+
+SELECT DISTINCT ON (login) event, date
+  FROM syslog
+  ORDER BY user_id, date DESC;
